@@ -186,6 +186,7 @@ main section:nth-child(2) p {
 /* =================STYLING TEAM PAGE================ */
 
 main section:nth-child(3) {
+  text-align: center;
 }
 
 main section:nth-child(3) h2 {
@@ -194,7 +195,6 @@ main section:nth-child(3) h2 {
 }
 
 main section:nth-child(3) h3 {
-  text-align: center;
   margin-bottom: 1em;
 }
 
@@ -202,4 +202,85 @@ main section:nth-child(3) p {
   text-align: justify;
   max-width: var(--max-width-text);
   margin: 0 auto;
+}
+
+main section:nth-child(3) h4 {
+  margin-bottom: 2em;
+  margin-inline: auto;
+  max-width: 50%;
+  padding: 1em;
+  background-color: black;
+  color: white;
+}
+
+#teams > div:nth-of-type(1) {
+  margin-bottom: 3rem;
+}
+/* ====STYLING FORMATIONS========== */
+
+.grid-teams {
+  background-color: #77c677;
+  margin-bottom: 3.5rem;
+}
+
+/* ====STYLING PLAYER ITEMS========== */
+
+.grid-teams > div {
+  padding: 0.5em 1em;
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+/* SETTING UP GRID-AREA */
+
+/* STYLING TACTICS weiter unten */
+.grid-teams {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-areas:
+    ". ten . eleven . "
+    ". . nine . ."
+    "seven . . . eight"
+    ". . six . ."
+    ". . five . ."
+    ". three . four ."
+    ". . two . ."
+    ". . one . .";
+}
+
+/* SElECTING GRID ITEMS */
+
+.grid-teams div:nth-of-type(1) {
+  grid-area: one;
+}
+.grid-teams div:nth-of-type(2) {
+  grid-area: two;
+}
+.grid-teams div:nth-of-type(3) {
+  grid-area: three;
+}
+.grid-teams div:nth-of-type(4) {
+  grid-area: four;
+}
+.grid-teams div:nth-of-type(5) {
+  grid-area: five;
+}
+.grid-teams div:nth-of-type(6) {
+  grid-area: six;
+}
+.grid-teams div:nth-of-type(7) {
+  grid-area: seven;
+}
+.grid-teams div:nth-of-type(8) {
+  grid-area: eight;
+}
+.grid-teams div:nth-of-type(9) {
+  grid-area: nine;
+}
+.grid-teams div:nth-of-type(10) {
+  grid-area: ten;
+}
+.grid-teams div:nth-of-type(11) {
+  grid-area: eleven;
 }
