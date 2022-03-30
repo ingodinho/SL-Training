@@ -26,15 +26,15 @@ body {
 /*===============SCROLLING============*/
 
 html {
-  scroll-snap-type: y mandatory;
+  /* scroll-snap-type: y mandatory; */
   scroll-behavior: smooth;
   scroll-padding: 0;
 }
 
 section {
-  scroll-snap-align: start;
-  scroll-margin-block-start: 10vh;
-  scroll-margin-block-end: 20vh;
+  /* scroll-snap-align: start; */
+  scroll-margin-block-start: 7.5vh;
+  /* scroll-margin-block-end: 20vh; */
 }
 
 /* ==============NAVBAR============ */
