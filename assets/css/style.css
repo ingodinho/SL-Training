@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+/* font-family: 'Roboto', sans-serif; */
+
+/* ============DEFINING VARIABLES=========== */
+
+:root {
+  --prm-ff: "Roboto", sans-serif;
+  --max-width-text: 60ch;
+}
+
+/* =============GENERAL STYLING============== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: var(--prm-ff);
+}
+
+/*===============SCROLLING============*/
+
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scroll-padding: 0;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-margin-block-start: 10vh;
+  scroll-margin-block-end: 20vh;
+}
+
+/* ==============NAVBAR============ */
+body nav:first-of-type {
+  position: sticky;
+  top: 0em;
+  min-height: 5vh;
+}
+
+body nav:first-of-type ul {
+  background-color: black;
+  text-align: right;
+  list-style: none;
+}
+
+body nav:first-of-type ul li {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1em 1em;
+  /* border-right: solid 0.25em white;
+  border-left: solid 0.25em white; */
+  text-align: center;
+}
+
+body nav:first-of-type ul li a {
+  color: white;
+  text-shadow: 0px 0px 1px white;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+body nav:first-of-type ul li a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+body nav:first-of-type ul li:last-child {
+  background-color: red;
+}
+/* =============HEADER SECTION 1 ============== */
+
+section header > div:first-of-type {
+  text-align: left;
+  /* position: relative; */
+  /* top: -3rem; */
+  /* left: -1rem; */
+}
+
+section header {
+  background-image: url(../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg);
+  background-size: cover;
+  background-position: center;
+  min-height: 95vh;
+  margin-bottom: 5rem;
+}
+
+section header article {
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: var(--prm-ff);
+  /* text-shadow: 1px 1px 2px black; */
+  /* padding: 1.5rem 0; */
+}
+
+section header article h1 {
+  font-size: 5rem;
+}
+
+section header article p {
+  font-size: 2.5rem;
+}
+
+/* =============NEWS SITE=============== */
+
+/* /////// SETUP CSS GRID / FLEXBOX ////////// */
+
+main section div:nth-child(1) {
+  grid-area: news-1;
+}
+
+main section div:nth-child(2) {
+  grid-area: news-2;
+}
+
+main section div:nth-child(3) {
+  grid-area: news-3;
+}
+
+main section div:nth-child(4) {
+  grid-area: news-4;
+}
+
+main section div:nth-child(5) {
+  grid-area: player-focus;
+}
+
+main section:nth-child(1) > div {
+  display: flex;
+}
+
+main > section:nth-child(1) {
+  display: grid;
+  grid-template-areas:
+    "news-1 news-1 player-focus"
+    "news-2 news-3 player-focus"
+    "news-2 news-4 news-4";
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  min-height: 95vh;
+}
+
+/* ////////Styling NEWS-BLOCKS///////// */
+
+main section:nth-child(1) {
+  margin-bottom: 5rem;
+}
+
+main section:nth-child(1) div {
+  padding: 2em;
+  background-color: black;
+  color: white;
+
+  /* margin-bottom: 2.5rem; */
+}
+
+/* ==============STYLING WHY PAGE================ */
+
+main section:nth-child(2) {
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+  margin-bottom: 2.5rem;
+}
+
+main section:nth-child(2) h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+main section:nth-child(2) p {
+  text-align: justify;
+  margin-bottom: 1em;
+  line-height: 1.25em;
+}
+
+/* =================STYLING TEAM PAGE================ */
+
+main section:nth-child(3) {
+}
+
+main section:nth-child(3) h2 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+main section:nth-child(3) h3 {
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+main section:nth-child(3) p {
+  text-align: justify;
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+}
