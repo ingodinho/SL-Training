@@ -8,3 +8,7 @@ Ich hoffe, man sieht den Fortschritt im Laufe der Zeit :-)
 Viele Grüße
 Ingo
 
+Zu finden ist die Seite unter:
+
+https://ingodinho.github.io/SL-Training/
+
