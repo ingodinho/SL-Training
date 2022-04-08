@@ -7,6 +7,8 @@
 :root {
   --prm-ff: "Roboto", sans-serif;
   --max-width-text: 60ch;
+  --space-vertical-half: 5vh;
+  --space-vertical-full: 10vh;
 }
 
 /* =============GENERAL STYLING============== */
@@ -17,31 +19,21 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  max-width: 1000px;
+  max-width: 1440px;
   margin: 0 auto;
   font-family: var(--prm-ff);
 }
 
-/*===============SCROLLING============*/
-
-html {
-  /* scroll-snap-type: y mandatory; */
-  scroll-behavior: smooth;
-  scroll-padding: 0;
-}
-
-section {
-  /* scroll-snap-align: start; */
-  scroll-margin-block-start: 7.5vh;
-  /* scroll-margin-block-end: 20vh; */
-}
 
 /* ==============NAVBAR============ */
 body nav:first-of-type {
   position: sticky;
-  top: 0em;
-  min-height: 5vh;
+  top: 0;
 }
 
 body nav:first-of-type ul {
@@ -55,9 +47,8 @@ body nav:first-of-type ul li {
   font-size: 1rem;
   font-weight: 700;
   padding: 1em 1em;
-  /* border-right: solid 0.25em white;
-  border-left: solid 0.25em white; */
   text-align: center;
+  border-bottom: 2px solid white;
 }
 
 body nav:first-of-type ul li a {
@@ -77,35 +68,25 @@ body nav:first-of-type ul li:last-child {
 }
 /* =============HEADER SECTION 1 ============== */
 
-section header > div:first-of-type {
+header > div:first-of-type {
   text-align: left;
-  /* position: relative; */
-  /* top: -3rem; */
-  /* left: -1rem; */
 }
 
-section header {
-  background-image: url(../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg);
-  background-size: cover;
-  background-position: center;
-  min-height: 95vh;
-  margin-bottom: 5rem;
+header {
+  background: center/cover no-repeat url('../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg');
+  margin-bottom: var(--space-vertical-half);
 }
 
-section header article {
-  max-width: 50%;
-  margin: 0 auto;
+header article {
   text-align: center;
-  font-family: var(--prm-ff);
-  /* text-shadow: 1px 1px 2px black; */
-  /* padding: 1.5rem 0; */
+  padding: 10vh 0 40vh 0;
 }
 
-section header article h1 {
+header article h1 {
   font-size: 5rem;
 }
 
-section header article p {
+header article p {
   font-size: 2.5rem;
 }
 
@@ -113,31 +94,32 @@ section header article p {
 
 /* /////// SETUP CSS GRID / FLEXBOX ////////// */
 
-main section div:nth-child(1) {
+.section_news div:nth-child(1) {
   grid-area: news-1;
 }
 
-main section div:nth-child(2) {
+.section_news div:nth-child(2) {
   grid-area: news-2;
 }
 
-main section div:nth-child(3) {
+.section_news div:nth-child(3) {
   grid-area: news-3;
 }
 
-main section div:nth-child(4) {
+.section_news div:nth-child(4) {
   grid-area: news-4;
 }
 
-main section div:nth-child(5) {
+.section_news div:nth-child(5) {
   grid-area: player-focus;
 }
 
-main section:nth-child(1) > div {
+.section_news > div {
   display: flex;
 }
 
-main > section:nth-child(1) {
+.section_news {
+  /* GRID */
   display: grid;
   grid-template-areas:
     "news-1 news-1 player-focus"
@@ -145,99 +127,83 @@ main > section:nth-child(1) {
     "news-2 news-4 news-4";
   grid-auto-columns: 1fr;
   gap: 1rem;
-  min-height: 95vh;
+  /* STYLING */
+  padding: var(--space-vertical-half) 0 0 0;
+  border-top: solid 1px black;
 }
 
 /* ////////Styling NEWS-BLOCKS///////// */
 
-main section:nth-child(1) {
+.section_news {
   margin-bottom: 5rem;
 }
 
-main section:nth-child(1) div {
+.section_news div {
   padding: 2em;
   background-color: black;
   color: white;
-
-  /* margin-bottom: 2.5rem; */
 }
 
 /* ==============STYLING WHY PAGE================ */
 
-main section:nth-child(2) {
+.section_why {
   max-width: var(--max-width-text);
-  margin: 0 auto;
-  margin-bottom: 2.5rem;
+  margin: 0 auto var(--space-vertical-full) auto;
 }
 
-main section:nth-child(2) h2 {
+.section_why h2 {
   text-align: center;
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1em;
+  margin-bottom: 5vh;
 }
 
-main section:nth-child(2) p {
+.section_why p {
   text-align: justify;
-  margin-bottom: 1em;
+  margin-bottom: 1.5vh;
   line-height: 1.25em;
 }
 
 /* =================STYLING TEAM PAGE================ */
 
-main section:nth-child(3) {
+.section_teams {
   text-align: center;
 }
 
-main section:nth-child(3) h2 {
+.section_teams h2 {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 5vh
 }
 
-main section:nth-child(3) h3 {
-  margin-bottom: 1em;
+.section_teams h3 {
+  margin-bottom: 2.5vh;
 }
 
-main section:nth-child(3) p {
+.section_teams p {
   text-align: justify;
   max-width: var(--max-width-text);
   margin: 0 auto;
 }
 
-main section:nth-child(3) h4 {
-  margin-bottom: 2em;
-  margin-inline: auto;
-  max-width: 50%;
-  padding: 1em;
+.section_teams h4 {
+  display: inline-block;
+  margin: 0 auto 5vh auto;
+  padding: 2vh 15%;
   background-color: black;
   color: white;
 }
 
-#teams > div:nth-of-type(1) {
+.section_teams > div:nth-of-type(1) {
   margin-bottom: 3rem;
 }
 /* ====STYLING FORMATIONS========== */
+/* SETTING UP GRID-AREA */
 
 .grid-teams {
   background-color: #77c677;
   margin-bottom: 3.5rem;
-}
-
-/* ====STYLING PLAYER ITEMS========== */
-
-.grid-teams > div {
-  padding: 0.5em 1em;
-  background-color: black;
-  text-align: center;
-  color: white;
-}
-
-/* SETTING UP GRID-AREA */
-
-/* STYLING TACTICS weiter unten */
-.grid-teams {
   display: grid;
-  gap: 0.5rem;
+  row-gap: 2.5vh;
   grid-template-areas:
     ". ten . eleven . "
     ". . nine . ."
@@ -247,6 +213,15 @@ main section:nth-child(3) h4 {
     ". three . four ."
     ". . two . ."
     ". . one . .";
+}
+
+/* ====STYLING PLAYER ITEMS========== */
+
+.grid-teams > div {
+  padding: 1vh 2%;
+  background-color: black;
+  text-align: center;
+  color: white;
 }
 
 /* SElECTING GRID ITEMS */
