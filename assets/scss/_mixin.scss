@@ -1,0 +1,20 @@
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 2.5vw;
+}
+
+@mixin flex-news {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    gap: 2.5vw;
+}
+
+@mixin flex-news_column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 2.5vw;
+}

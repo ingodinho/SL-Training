@@ -1,0 +1,277 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
+
+/* font-family: 'Roboto', sans-serif; */
+
+/* ============DEFINING VARIABLES=========== */
+
+/* :root {
+  --prm-ff: "Roboto", sans-serif;
+  --max-width-text: 60ch;
+  --space-vertical-half: 5vh;
+  --space-vertical-full: 10vh;
+} */
+
+/* =============GENERAL STYLING============== */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+/* html {
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+  font-family: var(--prm-ff);
+} */
+
+
+/* ==============NAVBAR============ */
+/* body nav:first-of-type {
+  position: sticky;
+  top: 0;
+}
+
+body nav:first-of-type ul {
+  background-color: black;
+  text-align: right;
+  list-style: none;
+}
+
+body nav:first-of-type ul li {
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1em 1em;
+  text-align: center;
+  border-bottom: 2px solid white;
+}
+
+body nav:first-of-type ul li a {
+  color: white;
+  text-shadow: 0px 0px 1px white;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+body nav:first-of-type ul li a:hover {
+  color: grey;
+  text-decoration: none;
+}
+
+body nav:first-of-type ul li:last-child {
+  background-color: red;
+} */
+
+/* =============HEADER SECTION 1 ============== */
+/* 
+header > img:first-of-type {
+  position: fixed;
+  width: 5%;
+  top: 1vh;
+  left: 1%;
+}
+
+header {
+  background: center/cover no-repeat url('../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg');
+  margin-bottom: var(--space-vertical-half);
+}
+
+header article {
+  text-align: center;
+  padding: 10vh 0 40vh 0;
+}
+
+header article h1 {
+  font-size: 5rem;
+}
+
+header article p {
+  font-size: 2.5rem;
+} */
+
+/* =============NEWS SITE=============== */
+
+/* /////// SETUP CSS GRID / FLEXBOX ////////// */
+
+.section_news div:nth-child(1) {
+  grid-area: news-1;
+}
+
+.section_news div:nth-child(2) {
+  grid-area: news-2;
+}
+
+.section_news div:nth-child(3) {
+  grid-area: news-3;
+}
+
+.section_news div:nth-child(4) {
+  grid-area: news-4;
+}
+
+.section_news div:nth-child(5) {
+  grid-area: player-focus;
+}
+
+.section_news > div {
+  display: flex;
+}
+
+.section_news {
+  /* GRID */
+  display: grid;
+  grid-template-areas:
+    "news-1 news-1 player-focus"
+    "news-2 news-3 player-focus"
+    "news-2 news-4 news-4";
+  grid-auto-columns: 1fr;
+  gap: 1rem;
+  /* STYLING */
+  padding: var(--space-vertical-half) 0 0 0;
+  border-top: solid 1px black;
+}
+
+/* ////////Styling NEWS-BLOCKS///////// */
+
+.section_news {
+  max-width: 80%;
+  margin: 0 auto var(--space-vertical-full) auto;
+}
+
+.section_news div {
+  padding: 2vh 2%;
+  background-color: black;
+  color: white;
+}
+
+/* ==============STYLING WHY PAGE================ */
+
+.section_why {
+  max-width: var(--max-width-text);
+  margin: 0 auto var(--space-vertical-full) auto;
+}
+
+.section_why h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 5vh;
+}
+
+.section_why p {
+  text-align: justify;
+  margin-bottom: 1.5vh;
+  line-height: 1.25em;
+}
+
+/* =================STYLING TEAM PAGE================ */
+
+.section_teams {
+  text-align: center;
+}
+
+.section_teams h2 {
+  text-align: center;
+  margin-bottom: 5vh
+}
+
+.section_teams p {
+  text-align: justify;
+  max-width: var(--max-width-text);
+  margin: 0 auto;
+}
+
+.section_teams h4 {
+  margin: 0 25% 5vh 25%;
+  padding: 2vh 15%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+.section_teams > div:nth-of-type(1) {
+  margin-bottom: 3rem;
+}
+/* ====STYLING FORMATIONS========== */
+/* SETTING UP GRID-AREA */
+
+.grid-teams {
+  background: linear-gradient(#567D46, #84c011, #567D46 30% 70%, #84c011, #567D46);
+  margin: 0 auto 10vh auto;
+  display: grid;
+  row-gap: 2.5vh;
+  padding: 2vh 2%;
+  grid-template-areas:
+    ". ten . eleven . "
+    ". . nine . ."
+    "seven . . . eight"
+    ". . six . ."
+    ". . five . ."
+    ". three . four ."
+    ". . two . ."
+    ". . one . .";
+}
+
+/* ====STYLING PLAYER ITEMS========== */
+
+.flex_item {
+  /* padding: 1vh 2%; */
+  background-color: black;
+  text-align: center;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.flex-position {
+  flex-basis: 25%;
+  background-color: #fff;
+  color: #000;
+  padding: 2vh 2%;
+  text-transform: uppercase;
+}
+
+.flex-player {
+  flex-basis: 75%;
+}
+
+/* SElECTING GRID ITEMS */
+
+.grid-teams div:nth-of-type(1) {
+  grid-area: one;
+}
+.grid-teams div:nth-of-type(2) {
+  grid-area: two;
+}
+.grid-teams div:nth-of-type(3) {
+  grid-area: three;
+}
+.grid-teams div:nth-of-type(4) {
+  grid-area: four;
+}
+.grid-teams div:nth-of-type(5) {
+  grid-area: five;
+}
+.grid-teams div:nth-of-type(6) {
+  grid-area: six;
+}
+.grid-teams div:nth-of-type(7) {
+  grid-area: seven;
+}
+.grid-teams div:nth-of-type(8) {
+  grid-area: eight;
+}
+.grid-teams div:nth-of-type(9) {
+  grid-area: nine;
+}
+.grid-teams div:nth-of-type(10) {
+  grid-area: ten;
+}
+.grid-teams div:nth-of-type(11) {
+  grid-area: eleven;
+}

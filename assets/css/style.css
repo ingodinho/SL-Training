@@ -1,261 +1,123 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
-
-/* font-family: 'Roboto', sans-serif; */
-
-/* ============DEFINING VARIABLES=========== */
-
-:root {
-  --prm-ff: "Roboto", sans-serif;
-  --max-width-text: 60ch;
-  --space-vertical-half: 5vh;
-  --space-vertical-full: 10vh;
-}
-
-/* =============GENERAL STYLING============== */
-
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
 body {
   max-width: 1440px;
   margin: 0 auto;
-  font-family: var(--prm-ff);
+  font-family: "Roboto", sans-serif;
+  color: black;
 }
 
-
-/* ==============NAVBAR============ */
-body nav:first-of-type {
-  position: sticky;
-  top: 0;
-}
-
-body nav:first-of-type ul {
-  background-color: black;
-  text-align: right;
-  list-style: none;
-}
-
-body nav:first-of-type ul li {
-  display: inline-block;
-  font-size: 1rem;
-  font-weight: 700;
-  padding: 1em 1em;
-  text-align: center;
-  border-bottom: 2px solid white;
-}
-
-body nav:first-of-type ul li a {
-  color: white;
-  text-shadow: 0px 0px 1px white;
-  text-decoration: none;
-  letter-spacing: 0.05em;
-}
-
-body nav:first-of-type ul li a:hover {
-  color: grey;
-  text-decoration: none;
-}
-
-body nav:first-of-type ul li:last-child {
-  background-color: red;
-}
-/* =============HEADER SECTION 1 ============== */
-
-header > div:first-of-type {
-  text-align: left;
-}
-
-header {
-  background: center/cover no-repeat url('../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg');
-  margin-bottom: var(--space-vertical-half);
-}
-
-header article {
-  text-align: center;
-  padding: 10vh 0 40vh 0;
-}
-
-header article h1 {
-  font-size: 5rem;
-}
-
-header article p {
-  font-size: 2.5rem;
-}
-
-/* =============NEWS SITE=============== */
-
-/* /////// SETUP CSS GRID / FLEXBOX ////////// */
-
-.section_news div:nth-child(1) {
-  grid-area: news-1;
-}
-
-.section_news div:nth-child(2) {
-  grid-area: news-2;
-}
-
-.section_news div:nth-child(3) {
-  grid-area: news-3;
-}
-
-.section_news div:nth-child(4) {
-  grid-area: news-4;
-}
-
-.section_news div:nth-child(5) {
-  grid-area: player-focus;
-}
-
-.section_news > div {
-  display: flex;
-}
-
-.section_news {
-  /* GRID */
-  display: grid;
-  grid-template-areas:
-    "news-1 news-1 player-focus"
-    "news-2 news-3 player-focus"
-    "news-2 news-4 news-4";
-  grid-auto-columns: 1fr;
-  gap: 1rem;
-  /* STYLING */
-  padding: var(--space-vertical-half) 0 0 0;
-  border-top: solid 1px black;
-}
-
-/* ////////Styling NEWS-BLOCKS///////// */
-
-.section_news {
-  margin-bottom: 5rem;
-}
-
-.section_news div {
-  padding: 2em;
-  background-color: black;
-  color: white;
-}
-
-/* ==============STYLING WHY PAGE================ */
-
-.section_why {
-  max-width: var(--max-width-text);
-  margin: 0 auto var(--space-vertical-full) auto;
-}
-
-.section_why h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 5vh;
-}
-
-.section_why p {
-  text-align: justify;
-  margin-bottom: 1.5vh;
-  line-height: 1.25em;
-}
-
-/* =================STYLING TEAM PAGE================ */
-
-.section_teams {
-  text-align: center;
-}
-
-.section_teams h2 {
-  text-align: center;
-  margin-bottom: 5vh
-}
-
-.section_teams h3 {
-  margin-bottom: 2.5vh;
-}
-
-.section_teams p {
-  text-align: justify;
-  max-width: var(--max-width-text);
+.max-width {
+  width: 95%;
   margin: 0 auto;
 }
 
-.section_teams h4 {
-  display: inline-block;
-  margin: 0 auto 5vh auto;
-  padding: 2vh 15%;
-  background-color: black;
+body nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2.5vw;
+  justify-content: space-between;
+  align-items: center;
   color: white;
-}
-
-.section_teams > div:nth-of-type(1) {
-  margin-bottom: 3rem;
-}
-/* ====STYLING FORMATIONS========== */
-/* SETTING UP GRID-AREA */
-
-.grid-teams {
-  background-color: #77c677;
-  margin-bottom: 3.5rem;
-  display: grid;
-  row-gap: 2.5vh;
-  grid-template-areas:
-    ". ten . eleven . "
-    ". . nine . ."
-    "seven . . . eight"
-    ". . six . ."
-    ". . five . ."
-    ". three . four ."
-    ". . two . ."
-    ". . one . .";
-}
-
-/* ====STYLING PLAYER ITEMS========== */
-
-.grid-teams > div {
-  padding: 1vh 2%;
   background-color: black;
+  padding: 1vh 5%;
+}
+body nav .nav_logo img {
+  width: 40%;
+}
+body nav .nav_right h2 {
+  text-align: right;
+  font-size: 3.2rem;
+  padding: 1rem 0;
+}
+body nav .nav_right ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 2.5vw;
+  justify-content: flex-end;
+  list-style: none;
+}
+body nav .nav_right ul li a {
+  text-decoration: none;
+  color: inherit;
+  text-shadow: 0px 0px 1px white;
+  font-size: 1.6rem;
+}
+
+.section_home {
+  background: url("../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg") center/cover no-repeat;
+}
+.section_home article {
   text-align: center;
-  color: white;
+  padding: 20vh 0 45vh 0;
+}
+.section_home article h1 {
+  font-size: 8.5rem;
+}
+.section_home article p {
+  font-size: 3.2rem;
 }
 
-/* SElECTING GRID ITEMS */
+.headline_news {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-top: 10vh;
+}
 
-.grid-teams div:nth-of-type(1) {
-  grid-area: one;
+.section_news {
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr 0.5fr;
+  gap: 2rem;
+  margin: 10vh 0;
 }
-.grid-teams div:nth-of-type(2) {
-  grid-area: two;
+.section_news .article-news {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  gap: 2.5vw;
 }
-.grid-teams div:nth-of-type(3) {
-  grid-area: three;
+.section_news .article-news_text h4 {
+  font-size: 2rem;
 }
-.grid-teams div:nth-of-type(4) {
-  grid-area: four;
+.section_news .article-news_text p {
+  font-size: 1.6rem;
 }
-.grid-teams div:nth-of-type(5) {
-  grid-area: five;
+.section_news .article-news_5 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 2.5vw;
+  grid-area: 1/3/3/4;
 }
-.grid-teams div:nth-of-type(6) {
-  grid-area: six;
+
+.section_why {
+  text-align: justify;
 }
-.grid-teams div:nth-of-type(7) {
-  grid-area: seven;
+.section_why article {
+  width: 65ch;
+  font-size: 2rem;
+  margin: 0 auto 10vh auto;
 }
-.grid-teams div:nth-of-type(8) {
-  grid-area: eight;
+.section_why article h2 {
+  font-size: 3.2rem;
+  text-align: center;
+  margin: 10vh 0;
 }
-.grid-teams div:nth-of-type(9) {
-  grid-area: nine;
+.section_why article p {
+  line-height: 1.4;
+  margin-bottom: 2.5vh;
 }
-.grid-teams div:nth-of-type(10) {
-  grid-area: ten;
-}
-.grid-teams div:nth-of-type(11) {
-  grid-area: eleven;
-}
+
+/*# sourceMappingURL=style.css.map */

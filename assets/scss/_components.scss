@@ -1,0 +1,128 @@
+// ==========================================================================
+//                             NAVBAR
+// ==========================================================================
+
+
+body nav {
+    @include flex-row;
+    justify-content: space-between;
+    align-items: center;
+    color: $clr-sec;
+    background-color: $clr-prm;
+    padding: 1vh 5%;
+
+    .nav_logo {
+        img {
+            width: 40%;
+        }
+    }
+    
+    .nav_right {        
+        h2 {
+            text-align: right;
+            font-size: $font-l;
+            padding: 1rem 0;
+        }
+        ul {
+            @include flex-row;
+            justify-content: flex-end;
+            list-style: none;
+    
+            li {
+                
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                    text-shadow: 0px 0px 1px $clr-sec;
+                    font-size: $font-sm;
+                }
+            }
+        }
+    }
+}
+
+// ==========================================================================
+//                             HERO SECTION 
+// ==========================================================================
+
+.section_home {
+    background: url('../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg') center / cover no-repeat;
+
+    article {
+        text-align: center;
+        padding: 20vh 0 45vh 0;
+
+        h1 {
+            font-size: $font-xl;
+        }
+
+        p {
+            font-size: $font-l;
+        }
+    }
+}
+
+
+// ==========================================================================
+//                             NEWS SECTION 
+// ==========================================================================
+
+
+.headline_news {
+    font-size: $font-l;
+    text-align: center;
+    margin-top: $spacing-full;
+}
+
+.section_news {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 0.5fr;
+    gap: 2rem;
+    margin: $spacing-full 0;
+
+    .article-news {
+        @include flex-news;
+
+        &_text{
+
+            h4 {
+                font-size: $font-m;
+            }
+
+            p {
+                font-size: $font-sm;
+            }
+        }
+    }
+
+    .article-news_5 {
+        @include flex-news_column;
+        grid-area: 1 / 3 / 3 / 4;
+    }
+}
+
+
+// ==========================================================================
+//                             WHY SECTION 
+// ==========================================================================
+
+.section_why {
+    text-align: justify;
+
+    article {
+        width: $max-width-text;
+        font-size: $font-m;
+        margin: 0 auto $spacing-full auto;
+
+        h2 {
+            font-size: $font-l;
+            text-align: center;
+            margin: $spacing-full 0;
+        }
+    
+        p {
+            line-height: 1.4;
+            margin-bottom: calc($spacing-half / 2);
+        }
+    }
+}
