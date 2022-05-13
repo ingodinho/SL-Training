@@ -46,19 +46,141 @@ body nav {
 // ==========================================================================
 
 .section_home {
-    background: url('../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg') center / cover no-repeat;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-items: center;
+    margin-top: 10px;
+    margin-bottom: $spacing-full;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url('../img/hero_opti.jpeg') center / cover no-repeat;
+    
     article {
         text-align: center;
-        padding: 20vh 0 45vh 0;
+        color: $clr-sec;
+        padding: 16rem 0;
+        margin-left: 50px;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
 
         h1 {
             font-size: $font-xl;
+            line-height: 1.2;
+            letter-spacing: -0.5px;
         }
 
         p {
             font-size: $font-l;
+            margin: 4rem 0 8rem 0;
         }
+
+        .header_register {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+                font-size: $font-mm;
+                margin-right: 2.5rem;
+            }
+
+            button {
+                font-size: $font-mm;
+                padding: 1.5rem 6rem;
+                border-radius: 10px;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                border: none;
+                background-color: $clr-prm;
+                color: $clr-sec;
+
+                &:hover {
+                    background-color: $clr-prm-soft;
+                }
+            }
+        }
+    }
+
+    .header_img {
+        padding: 8rem 4.8rem;
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+    }
+}
+
+// ==========================================================================
+//                             IDEA/Features
+// ==========================================================================
+
+.section_idea {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    align-items: center;
+    column-gap: 4.8rem;
+    padding: 4rem 2rem;
+    border-radius: 10px;
+    background-color: $clr-prm;
+    color: $clr-sec;
+    margin-bottom: $spacing-full;
+
+    .article_idea {
+
+        h3 {
+            font-size: $font-mm;
+            margin-bottom: 1.6rem;
+        }
+
+        p {
+            font-size: $font-m;
+            line-height: $line-medium;
+        }
+
+        .author {
+            margin-top: 1.2rem;
+            font-style: italic;
+        }
+    }
+}
+
+.section_features {
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    padding: 4rem 0;
+    
+    h2 {
+        font-size: $font-l;
+        text-align: center;
+        margin-bottom: $spacing-half;
+    }
+
+    .features {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        column-gap: 3.2rem;
+        
+        article {
+            
+            padding: 4rem 2rem;
+            border-radius: 10px;
+            
+            svg {
+                width: 3.6rem;
+                margin-bottom: 2.4rem;
+                color: $clr-prm;
+            }
+        
+            h3 {
+                font-size: $font-mm;
+                margin-bottom: 1.6rem;
+            }
+        
+            p {
+                font-size: $font-m;
+                line-height: $line-medium;
+            }
+    }
+    
+    
     }
 }
 

@@ -14,7 +14,7 @@ body {
   max-width: 1440px;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  color: black;
+  color: #343a40;
 }
 
 .max-width {
@@ -29,8 +29,8 @@ body nav {
   gap: 2.5vw;
   justify-content: space-between;
   align-items: center;
-  color: white;
-  background-color: black;
+  color: #ebfbee;
+  background-color: #2f9e44;
   padding: 1vh 5%;
 }
 body nav .nav_logo img {
@@ -38,7 +38,7 @@ body nav .nav_logo img {
 }
 body nav .nav_right h2 {
   text-align: right;
-  font-size: 3.2rem;
+  font-size: 3rem;
   padding: 1rem 0;
 }
 body nav .nav_right ul {
@@ -52,35 +52,132 @@ body nav .nav_right ul {
 body nav .nav_right ul li a {
   text-decoration: none;
   color: inherit;
-  text-shadow: 0px 0px 1px white;
+  text-shadow: 0px 0px 1px #ebfbee;
   font-size: 1.6rem;
 }
 
 .section_home {
-  background: url("../img/henrique-macedo-8RzMsxk3wgg-unsplash.jpeg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 20vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)), url("../img/hero_opti.jpeg") center/cover no-repeat;
 }
 .section_home article {
   text-align: center;
-  padding: 20vh 0 45vh 0;
+  color: #ebfbee;
+  padding: 16rem 0;
+  margin-left: 50px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
 }
 .section_home article h1 {
-  font-size: 8.5rem;
+  font-size: 8.6rem;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
 }
 .section_home article p {
-  font-size: 3.2rem;
+  font-size: 3rem;
+  margin: 4rem 0 8rem 0;
+}
+.section_home article .header_register {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section_home article .header_register span {
+  font-size: 2.4rem;
+  margin-right: 2.5rem;
+}
+.section_home article .header_register button {
+  font-size: 2.4rem;
+  padding: 1.5rem 6rem;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  border: none;
+  background-color: #2f9e44;
+  color: #ebfbee;
+}
+.section_home article .header_register button:hover {
+  background-color: #37b24d;
+}
+.section_home .header_img {
+  padding: 8rem 4.8rem;
+}
+.section_home .header_img img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.section_idea {
+  display: grid;
+  grid-template-columns: 0.5fr 1fr;
+  align-items: center;
+  column-gap: 4.8rem;
+  padding: 4rem 2rem;
+  border-radius: 10px;
+  background-color: #2f9e44;
+  color: #ebfbee;
+  margin-bottom: 20vh;
+}
+.section_idea .article_idea h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.section_idea .article_idea p {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+.section_idea .article_idea .author {
+  margin-top: 1.2rem;
+  font-style: italic;
+}
+
+.section_features {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  padding: 4rem 0;
+}
+.section_features h2 {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 10vh;
+}
+.section_features .features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3.2rem;
+}
+.section_features .features article {
+  padding: 4rem 2rem;
+  border-radius: 10px;
+}
+.section_features .features article svg {
+  width: 3.6rem;
+  margin-bottom: 2.4rem;
+  color: #2f9e44;
+}
+.section_features .features article h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+.section_features .features article p {
+  font-size: 2rem;
+  line-height: 1.6;
 }
 
 .headline_news {
-  font-size: 3.2rem;
+  font-size: 3rem;
   text-align: center;
-  margin-top: 10vh;
+  margin-top: 20vh;
 }
 
 .section_news {
   display: grid;
   grid-template: 1fr 1fr/1fr 1fr 0.5fr;
   gap: 2rem;
-  margin: 10vh 0;
+  margin: 20vh 0;
 }
 .section_news .article-news {
   display: flex;
@@ -108,16 +205,16 @@ body nav .nav_right ul li a {
 .section_why article {
   width: 65ch;
   font-size: 2rem;
-  margin: 0 auto 10vh auto;
+  margin: 0 auto 20vh auto;
 }
 .section_why article h2 {
-  font-size: 3.2rem;
+  font-size: 3rem;
   text-align: center;
-  margin: 10vh 0;
+  margin: 20vh 0;
 }
 .section_why article p {
   line-height: 1.4;
-  margin-bottom: 2.5vh;
+  margin-bottom: 5vh;
 }
 
 /*# sourceMappingURL=style.css.map */
